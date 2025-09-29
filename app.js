@@ -11,8 +11,25 @@ app.get("/", (req, res) => {
   res.send("Hello Express!");
 });
 
-router.get("/user", (req, res) => {
-  res.send("This is Get user...");
+// users routes
+router.get("/users", (req, res) => {
+  res.send("This is GET Users...");
+});
+
+router.get("/users/:id", (req, res) => {
+  res.send("This is GET one users...");
+});
+
+router.post("/users/:id", (req, res) => {
+  res.send("This is Create Users...");
+});
+
+router.put("/users/:id", (req, res) => {
+  res.send("This is Update Users...");
+});
+
+router.delete("/users/:id", (req, res) => {
+  res.send("This is DELETE Users...");
 });
 
 app.use(router);
